@@ -1,0 +1,402 @@
+:root {
+  --app-primary-color: #3182ce;
+  --app-secondary-color: #4a5568;
+  --app-accent-color: #e74c3c;
+  --app-background-color: #ecf0f1;
+  --app-text-color: #34495e;
+  --app-card-background: #ffffff;
+  --app-shadow-color: rgba(0, 0, 0, 0.1);
+  --app-transition-speed: 0.3s;
+}
+
+.app-appointments__container {
+  padding: 2rem;
+  margin-top: 5rem;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: calc(100vh - 5rem);
+  box-shadow: 0 0 2rem var(--app-shadow-color);
+}
+
+.app-appointments__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--app-primary-color);
+}
+
+.app-appointments__title {
+  color: var(--app-secondary-color);
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.app-appointments__add-button {
+  background: var(--app-primary-color);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--app-transition-speed) ease;
+  box-shadow: 0 0.5rem 1rem var(--app-shadow-color);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+}
+
+.app-appointments__add-button:hover {
+  background: var(--app-secondary-color);
+  transform: translateY(-3px);
+  box-shadow: 0 0.7rem 1.5rem var(--app-shadow-color);
+}
+
+.app-appointments__add-icon {
+  margin-right: 0.5rem;
+}
+
+.app-appointments__search-bar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 2rem;
+  background-color: var(--app-card-background);
+  box-shadow: 0 0.5rem 1rem var(--app-shadow-color);
+}
+
+.app-appointments__search-input {
+  flex-grow: 1;
+  border: none;
+  background-color: transparent;
+  padding: 0.5rem;
+  font-size: 1rem;
+  color: var(--app-text-color);
+}
+
+.app-appointments__search-input:focus {
+  outline: none;
+}
+
+.app-appointments__search-icon {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+  color: var(--app-primary-color);
+}
+
+.app-appointments__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.app-appointment__card {
+  background: var(--app-card-background);
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem var(--app-shadow-color);
+  transition: all var(--app-transition-speed) ease;
+  overflow: hidden;
+  animation: app-appointments__fadeIn 0.5s ease;
+}
+
+.app-appointment__card:hover {
+  transform: translateY(-0.5rem) scale(1.02);
+  box-shadow: 0 1rem 2rem var(--app-shadow-color);
+}
+
+.app-appointment__card-header {
+  background: linear-gradient(
+    135deg,
+    var(--app-primary-color),
+    var(--app-secondary-color)
+  );
+  color: white;
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.app-appointment__card-header::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0) 80%
+  );
+  transform: rotate(30deg);
+}
+
+.app-appointment__name {
+  font-size: 1.4rem;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.app-appointment__icon {
+  margin-right: 0.5rem;
+}
+
+.app-appointment__card-body {
+  padding: 1.5rem;
+}
+
+.app-appointment__detail {
+  margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.app-appointment__label {
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+
+.app-appointment__card-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  background: #f8f9fa;
+}
+
+.app-appointment__edit-button,
+.app-appointment__delete-button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--app-transition-speed) ease;
+}
+
+.app-appointment__edit-button {
+  background: var(--app-primary-color);
+  color: white;
+}
+
+.app-appointment__delete-button {
+  background: var(--app-accent-color);
+  color: white;
+}
+
+.app-appointment__edit-button:hover,
+.app-appointment__delete-button:hover {
+  opacity: 0.8;
+  transform: translateY(-2px);
+}
+
+.app-appointments__calendar-container {
+  margin-top: 2rem;
+}
+
+.react-calendar {
+  width: 100%;
+  max-width: 100%;
+  background: var(--app-card-background);
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem var(--app-shadow-color);
+  font-family: "Roboto", sans-serif;
+}
+
+.react-calendar__navigation {
+  background: linear-gradient(
+    135deg,
+    var(--app-primary-color),
+    var(--app-secondary-color)
+  );
+  border-radius: 1rem 1rem 0 0;
+  margin-bottom: 0;
+}
+
+.react-calendar__navigation button {
+  color: white;
+  font-weight: 600;
+  min-width: 44px;
+  background: none;
+  font-size: 1rem;
+  margin-top: 8px;
+}
+
+.react-calendar__month-view__weekdays {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.75em;
+}
+
+.react-calendar__tile {
+  max-width: 100%;
+  padding: 1rem 0.5rem;
+  background: none;
+  text-align: center;
+  line-height: 16px;
+  font-size: 0.9rem;
+  transition: all var(--app-transition-speed) ease;
+}
+
+.react-calendar__tile:hover {
+  background-color: #e6e6e6;
+  border-radius: 0.5rem;
+}
+
+.react-calendar__tile--now {
+  background: #ffff76;
+  border-radius: 0.5rem;
+  font-weight: bold;
+}
+
+.react-calendar__tile--active {
+  background: var(--app-primary-color);
+  color: white;
+  border-radius: 0.5rem;
+}
+
+.app-appointments__calendar-tile--highlighted {
+  background-color: #bde4ff;
+  border-radius: 0.5rem;
+}
+
+.app-appointments__modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.app-appointments__modal-content {
+  background: var(--app-card-background);
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 1rem 2rem var(--app-shadow-color);
+  animation: app-appointments__modalFadeIn 0.3s ease;
+}
+
+.app-appointments__modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.app-appointments__modal-title {
+  font-size: 1.5rem;
+  color: var(--app-secondary-color);
+  margin: 0;
+}
+
+.app-appointments__modal-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--app-text-color);
+}
+
+.app-appointments__form-group {
+  margin-bottom: 1.5rem;
+}
+
+.app-appointments__form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--app-secondary-color);
+}
+
+.app-appointments__form-input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: border-color var(--app-transition-speed) ease;
+}
+
+.app-appointments__form-input:focus {
+  outline: none;
+  border-color: var(--app-primary-color);
+}
+
+.app-appointments__submit-button {
+  width: 100%;
+  padding: 1rem;
+  background: var(--app-primary-color);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--app-transition-speed) ease;
+}
+
+.app-appointments__submit-button:hover {
+  background: var(--app-secondary-color);
+}
+
+@keyframes app-appointments__fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes app-appointments__modalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .app-appointments__container {
+    padding: 1rem;
+  }
+
+  .app-appointments__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .app-appointments__add-button {
+    margin-top: 1rem;
+  }
+
+  .app-appointments__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .app-appointments__modal-content {
+    width: 95%;
+    padding: 1.5rem;
+  }
+}

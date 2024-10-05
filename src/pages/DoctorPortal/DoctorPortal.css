@@ -1,0 +1,157 @@
+/* Main container */
+.patient-portal {
+    padding: 40px;
+    background: linear-gradient(to bottom right, #f4f6f9, #ffffff);
+    min-height: 100vh;
+    margin-top: 80px;
+}
+
+/* Header styling */
+.portal-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.portal-header h1 {
+    font-size: 2.8em;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    animation: fadeIn 1s ease-in-out;
+    font-weight: bold;
+}
+
+.portal-header p {
+    font-size: 1.3em;
+    color: #34495e;
+    margin-bottom: 40px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Main content styling */
+.portal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Section styling */
+.profile-section, .appointments-section, .records-section, .message-section {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    width: 100%;
+    max-width: 850px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-section {
+    text-align: center;
+}
+
+.profile-icon {
+    font-size: 4.5em;
+    color: #3498db;
+    margin-bottom: 15px;
+}
+
+.profile-section h2 {
+    font-size: 2.2em;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.profile-section p {
+    font-size: 1.2em;
+    color: #7f8c8d;
+}
+
+/* Section headers styling */
+.appointments-section h2, .records-section h2, .message-section h2 {
+    font-size: 1.9em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.appointments-section h2 .fa-calendar-alt, 
+.records-section h2 .fa-file-alt, 
+.message-section h2 .fa-envelope {
+    font-size: 1.7em;
+    color: #3498db;
+    margin-right: 12px;
+}
+
+/* Lists styling */
+.appointments-section ul, .records-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.appointments-section li, .records-section li {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+
+/* Message section styling */
+.message-section {
+    text-align: center;
+}
+
+.message-button {
+    background: #3498db;
+    color: #ffffff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.message-button:hover {
+    background: #2980b9;
+    transform: scale(1.05);
+}
+
+/* Keyframes for fade-in animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .profile-icon {
+        font-size: 3.5em;
+    }
+
+    .profile-section h2 {
+        font-size: 1.7em;
+    }
+
+    .portal-header h1 {
+        font-size: 2.2em;
+    }
+
+    .portal-header p {
+        font-size: 1.1em;
+    }
+
+    .profile-section, .appointments-section, .records-section, .message-section {
+        width: 90%;
+        margin: 10px 0;
+    }
+}

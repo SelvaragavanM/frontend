@@ -1,0 +1,174 @@
+.settings-container {
+  max-width: 900px;
+  margin: 100px auto 40px;
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.settings-container:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.settings-header {
+  text-align: center;
+  color: #0056b3;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.section {
+  margin-bottom: 40px;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 20px;
+}
+
+.section h3 {
+  color: #0056b3;
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #0056b3;
+  padding-bottom: 10px;
+  font-weight: 700;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #444;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #0056b3;
+  box-shadow: 0 0 10px rgba(0, 86, 179, 0.2);
+  outline: none;
+}
+
+.business-hours {
+  display: flex;
+  flex-direction: column;
+}
+
+.business-hours .form-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.business-hours label {
+  flex: 1;
+  font-size: 1rem;
+  color: #333;
+}
+
+.business-hours input {
+  flex: 2;
+  margin-left: 15px;
+}
+
+.notifications {
+  display: flex;
+  align-items: center;
+}
+
+.toggle-switch {
+  position: relative;
+  width: 55px;
+  height: 30px;
+  margin-left: 15px;
+}
+
+.toggle-switch input[type="checkbox"] {
+  display: none;
+}
+
+.switch {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ccc;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.switch::before {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: white;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.3s ease;
+}
+
+input[type="checkbox"]:checked + .switch {
+  background-color: #0056b3;
+}
+
+input[type="checkbox"]:checked + .switch::before {
+  transform: translateX(25px);
+}
+
+.save-button {
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: 100%;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 86, 179, 0.2);
+}
+
+.save-button:hover {
+  background-color: #004494;
+  transform: scale(1.03);
+}
+
+@media (max-width: 768px) {
+  .settings-container {
+    padding: 20px;
+  }
+
+  .settings-header {
+    font-size: 1.8rem;
+  }
+
+  .section h3 {
+    font-size: 1.4rem;
+  }
+
+  .save-button {
+    font-size: 1.1rem;
+    padding: 12px;
+  }
+}

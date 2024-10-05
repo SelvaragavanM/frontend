@@ -1,0 +1,229 @@
+:root {
+  --tm-primary-color: #3498db;
+  --tm-primary-dark: #2980b9;
+  --tm-secondary-color: #2c3e50;
+  --tm-background-color: #f0f4f8;
+  --tm-card-background: #ffffff;
+  --tm-text-color: #34495e;
+  --tm-shadow-color: rgba(0, 0, 0, 0.1);
+  --tm-border-color: #e0e0e0;
+  --tm-border-radius: 12px;
+  --tm-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.tm-container {
+  font-family: "Inter", sans-serif;
+  background-color: var(--tm-background-color);
+  color: var(--tm-text-color);
+  padding: 2rem;
+  max-width: 1400px;
+  margin-top: 100px;
+  border-radius: var(--tm-border-radius);
+  box-shadow: var(--tm-shadow-color);
+}
+
+.tm-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.tm-title {
+  font-size: 2.5rem;
+  color: var(--tm-primary-color);
+  margin-bottom: 0.5rem;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.tm-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.tm-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.tm-actions {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.tm-action-card {
+  background-color: var(--tm-card-background);
+  border-radius: var(--tm-border-radius);
+  padding: 1.5rem;
+  box-shadow: var(--tm-shadow-color);
+  transition: var(--tm-transition);
+}
+
+.tm-action-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px var(--tm-shadow-color);
+}
+
+.tm-action-icon {
+  font-size: 2rem;
+  color: var(--tm-primary-color);
+  margin-bottom: 1rem;
+}
+
+.tm-action-title {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: var(--tm-primary-color);
+}
+
+.tm-action-description {
+  margin-bottom: 1.5rem;
+  color: #666;
+}
+
+.tm-button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  border: none;
+  margin-right: 0.5rem;
+}
+
+.tm-primary {
+  background-color: var(--tm-primary-color);
+  color: white;
+}
+
+.tm-primary:hover {
+  background-color: var(--tm-primary-dark);
+  transform: scale(1.05);
+}
+
+.tm-secondary {
+  background-color: var(--tm-secondary-color);
+  color: var(--tm-primary-color);
+}
+
+.tm-secondary:hover {
+  background-color: #e0e4ff;
+  transform: scale(1.05);
+}
+
+.tm-schedule {
+  flex: 1;
+  background-color: var(--tm-card-background);
+  border-radius: var(--tm-border-radius);
+  padding: 1.5rem;
+  box-shadow: var(--tm-shadow-color);
+}
+
+.tm-schedule-title {
+  font-size: 1.3rem;
+  color: var(--tm-primary-color);
+  margin-bottom: 1.5rem;
+}
+
+.tm-schedule-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.tm-schedule-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--tm-border-color);
+  transition: background 0.2s;
+}
+
+.tm-schedule-item:hover {
+  background: #f9f9f9;
+}
+
+.tm-schedule-icon {
+  font-size: 1.2rem;
+  color: var(--tm-primary-color);
+  margin-right: 1rem;
+}
+
+.tm-patient-name {
+  flex: 1;
+  font-weight: bold;
+}
+
+.tm-consultation-type {
+  margin-right: 1rem;
+  color: #666;
+}
+
+.tm-consultation-time {
+  color: #666;
+}
+
+.tm-video-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+.tm-local-video,
+.tm-remote-video {
+  width: 48%;
+  border-radius: var(--tm-border-radius);
+  box-shadow: var(--tm-shadow-color);
+  background-color: var(--tm-secondary-color);
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.tm-local-video:before,
+.tm-remote-video:before {
+  content: "Camera Off";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  color: #666;
+  text-align: center;
+}
+
+.tm-local-video:hover,
+.tm-remote-video:hover {
+  transform: scale(1.02);
+}
+
+.tm-animate-card {
+  animation: tmFadeInUp 0.5s ease-out;
+}
+
+@keyframes tmFadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .tm-content {
+    flex-direction: column;
+  }
+
+  .tm-video-container {
+    flex-direction: column;
+  }
+
+  .tm-local-video,
+  .tm-remote-video {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}

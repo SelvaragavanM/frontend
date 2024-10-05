@@ -1,0 +1,191 @@
+/* General Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 15px 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-bottom-left-radius: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: margin-left 0.3s ease, background-color 0.3s ease;
+}
+
+/* Dark Mode Styles */
+.navbar.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+.navbar.dark-mode .navbar-logo h2 {
+  color: #4a90e2;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Sidebar Styles */
+.navbar.sidebar-open {
+  margin-left: 280px;
+}
+
+.navbar.sidebar-closed {
+  margin-left: 60px;
+}
+
+/* Logo Styles */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo img {
+  height: 50px;
+  margin-right: 20px;
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
+}
+
+.navbar-logo h2 {
+  color: #0275d8;
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Action Buttons */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+}
+
+/* Icon Button */
+.icon-button {
+  background: rgba(2, 117, 216, 0.1);
+  border: none;
+  font-size: 1.4rem;
+  color: #0275d8;
+  margin-left: 15px;
+  cursor: pointer;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-button:hover {
+  background: rgba(2, 117, 216, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Notification Badge */
+.notification-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #d9534f;
+  color: white;
+  border-radius: 50%;
+  padding: 4px 8px;
+  font-size: 0.7rem;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Language Selector */
+.language-selector {
+  background: rgba(2, 117, 216, 0.1);
+  border: none;
+  color: #0275d8;
+  font-size: 1rem;
+  padding: 10px 15px;
+  border-radius: 25px;
+  margin-left: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.language-selector:hover {
+  background: rgba(2, 117, 216, 0.2);
+}
+
+.language-selector option {
+  background-color: #f8f9fa;
+  color: #0275d8;
+}
+
+/* Logout Button */
+.logout-button {
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logout-button svg {
+  margin-right: 8px;
+}
+
+.logout-button:hover {
+  background-color: #e74c3c;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  background: rgba(2, 117, 216, 0.1);
+  border: none;
+  color: #0275d8;
+  font-size: 1.4rem;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-toggle:hover {
+  background: rgba(2, 117, 216, 0.2);
+}
+
+/* Login Button */
+.login-button {
+  background-color: #0275d8;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #025aa5;
+  transform: translateY(-2px);
+}

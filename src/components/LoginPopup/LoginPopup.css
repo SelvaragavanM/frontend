@@ -1,0 +1,179 @@
+/* Overall popup container */
+.login-popup {
+  position: fixed;
+  z-index: 1100;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  overflow: auto;
+}
+
+/* Popup container styling */
+.login-popup-container {
+  width: max(25vw, 350px);
+  max-width: 500px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease-out;
+  overflow: hidden;
+}
+
+/* Header of the popup */
+.login-popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #444;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* Close button styling */
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #888;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #333;
+}
+
+/* Body of the popup */
+.login-popup-body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login-popup-body input {
+  border: 1px solid #ccc;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.login-popup-body input:focus {
+  border-color: #0275d8;
+  outline: none;
+}
+
+/* Authentication button styling */
+.auth-button {
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  color: white;
+  background-color: #0275d8;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.auth-button:hover {
+  background-color: #025aa5;
+  transform: translateY(-3px);
+}
+
+/* Error message styling */
+.error-message {
+  color: #d9534f;
+  font-size: 14px;
+  text-align: center;
+  margin: 0;
+}
+
+/* Terms and conditions styling */
+.terms {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+.terms input {
+  accent-color: #0275d8;
+}
+
+/* Switch authentication section */
+.switch-auth {
+  text-align: center;
+  font-size: 16px;
+  color: #0275d8;
+}
+
+.switch-auth span {
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* Panel selection styling */
+.panel-selection {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 450px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  z-index: 2;
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Heading in panel selection */
+.panel-selection h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* Buttons in panel selection */
+.panel-selection button {
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  color: white;
+  background-color: #0275d8;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.panel-selection button:hover {
+  background-color: #025aa5;
+  transform: translateY(-2px);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

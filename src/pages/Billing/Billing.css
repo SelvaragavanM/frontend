@@ -1,0 +1,255 @@
+.billing-container {
+  padding: 20px;
+  margin-top: 90px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.billing-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+}
+
+.billing-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ecf0f1;
+  padding-bottom: 10px;
+}
+
+.billing-header h2 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.button-group {
+  display: flex;
+  gap: 15px;
+}
+
+.add-item-btn,
+.generate-invoice-btn,
+.edit-patient-btn {
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+  text-transform: uppercase;
+}
+
+.generate-invoice-btn {
+  background-color: #27ae60;
+  color: white;
+}
+
+.add-item-btn {
+  background-color: #3498db;
+  color: white;
+}
+
+.edit-patient-btn {
+  background-color: #1abc9c;
+  color: white;
+}
+
+.generate-invoice-btn:hover {
+  background-color: #219150;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.add-item-btn:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.edit-patient-btn:hover {
+  background-color: #16a085;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.billing-summary {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.patient-details {
+  margin-bottom: 20px;
+}
+
+.patient-details .patient-details-header {
+  margin-bottom: 12px;
+  color: #2c3e50;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.patient-details p {
+  margin: 6px 0;
+  color: #95a5a6;
+}
+
+.billing-table {
+  margin-bottom: 20px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.billing-table th,
+.billing-table td {
+  padding: 14px;
+  text-align: left;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+.billing-table th {
+  background-color: #f4f4f4;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.billing-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.billing-table tr:hover {
+  background-color: #eaeaea;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.billing-modal,
+.add-item-modal,
+.patient-modal {
+  max-width: 600px;
+}
+
+.billing-modal .ant-modal-header,
+.add-item-modal .ant-modal-header,
+.patient-modal .ant-modal-header {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.billing-modal .ant-modal-footer,
+.add-item-modal .ant-modal-footer,
+.patient-modal .ant-modal-footer {
+  border-top: 1px solid #27ae60;
+}
+
+.ant-modal-title {
+  color: white;
+}
+
+.ant-form-item-label {
+  color: #2c3e50;
+}
+
+.ant-form-item {
+  margin-bottom: 20px;
+}
+
+.ant-btn {
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 12px 24px;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+  text-transform: uppercase;
+}
+
+.ant-btn:hover {
+  transform: scale(1.05);
+}
+
+.ant-btn-primary {
+  background-color: #27ae60;
+  border-color: #27ae60;
+}
+
+.ant-btn-primary:hover {
+  background-color: #219150;
+  border-color: #1e7e34;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .billing-container {
+    padding: 15px;
+    margin-top: 60px;
+  }
+  .billing-header h2 {
+    font-size: 24px;
+  }
+  .button-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27ae60;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #219150;
+}
+
+.loading-spinner {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 2s linear infinite;
+  margin: auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,65 @@
+/* Light mode (default) styles */
+body {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.navbar {
+  background-color: #f8f9fa;
+  color: #000000;
+}
+
+.navbar-logo h2 {
+  color: #0275d8;
+}
+
+.icon-button {
+  color: #0275d8;
+}
+
+.language-selector {
+  color: #0275d8;
+}
+
+.logout-button {
+  background-color: #d9534f;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode .navbar {
+  background-color: #333;
+  color: #e0e0e0;
+}
+
+body.dark-mode .navbar-logo h2 {
+  color: #4a90e2;
+}
+
+body.dark-mode .icon-button {
+  color: #4a90e2;
+}
+
+body.dark-mode .language-selector {
+  color: #4a90e2;
+}
+
+body.dark-mode .logout-button {
+  background-color: #e74c3c;
+}
+
+/* Additional styles for other components */
+body.dark-mode .some-component {
+  background-color: #222;
+  color: #ddd;
+}
+
+/* Ensure elements on different pages reflect the dark mode */
+body.dark-mode .other-page-element {
+  background-color: #333;
+  color: #e0e0e0;
+}
